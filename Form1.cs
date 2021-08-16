@@ -44,10 +44,6 @@ namespace 내힘으로만들CameraProject
 
         }
 
-        private void GetMomory()
-        {
-            pictureBoxIpl1.Image.Dispose();
-        }
         private void DisplayPC()
         {
             string rtspaddr = "rtsp://admin:1234@192.168.78.100:554";//연결스트링
@@ -102,9 +98,8 @@ namespace 내힘으로만들CameraProject
         /// <param name="e"></param>
         private void BtnSnapShot_Click(object sender, EventArgs e)
         {
-
-
-            /*Bitmap screen1 = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+           
+            Bitmap screen1 = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
             using (Graphics g = Graphics.FromImage(screen1))
             {
                 System.Drawing.Size a = new System.Drawing.Size(SystemInformation.VirtualScreen.Width, SystemInformation.VirtualScreen.Height);
@@ -121,7 +116,7 @@ namespace 내힘으로만들CameraProject
             screen1.Save("C:\\SnapShotFolder\\"  + "screen.bmp", ImageFormat.Bmp);
             int sHeight = screen1.Height;
             int swidth = screen1.Width;
-            MessageBox.Show("width:= " + swidth + "  height:= " + sHeight);*/
+            MessageBox.Show("width:= " + swidth + "  height:= " + sHeight);
 
             // screen.Save("c:\\button.gif", System.Drawing.Imaging.ImageFormat.Gif);
            /* string fileName = $"{DateTime.Now.ToString("yyyyMMdd_hh:mm:ss")}SnapShot";

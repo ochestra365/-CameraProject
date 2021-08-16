@@ -29,11 +29,13 @@ namespace 내힘으로만들CameraProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnSnapShot = new System.Windows.Forms.Button();
             this.LblTime = new System.Windows.Forms.Label();
             this.LblStatus = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +109,7 @@ namespace 내힘으로만들CameraProject
         private System.Windows.Forms.Button BtnSnapShot;
         private System.Windows.Forms.Label LblTime;
         private System.Windows.Forms.Label LblStatus;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
