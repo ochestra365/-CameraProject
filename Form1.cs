@@ -8,7 +8,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
 using System.ComponentModel;
-
+using System.Drawing.Imaging;
+using System.Drawing;
 namespace 내힘으로만들CameraProject
 {
     public partial class Form1 : Form
@@ -93,6 +94,46 @@ namespace 내힘으로만들CameraProject
         {
           // Form f2 = new WebBrowserControl();
           // f2.Show();
+        }
+        /// <summary>
+        /// snapshot yyyyMMdd
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnSnapShot_Click(object sender, EventArgs e)
+        {
+
+
+            /*Bitmap screen1 = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+            using (Graphics g = Graphics.FromImage(screen1))
+            {
+                System.Drawing.Size a = new System.Drawing.Size(SystemInformation.VirtualScreen.Width, SystemInformation.VirtualScreen.Height);
+                System.Drawing.Size reg = new System.Drawing.Size(this.Width, this.Height);
+                System.Drawing.Size def = new System.Drawing.Size(500, 800);
+
+               // g.CopyFromScreen(this.Left, this.Top, int.Parse(textBox1.Text), 100, def);
+
+            }
+            pictureBoxIpl1.SizeMode = PictureBoxSizeMode.Zoom;
+
+            pictureBoxIpl1.Image = screen1;
+
+            screen1.Save("C:\\SnapShotFolder\\"  + "screen.bmp", ImageFormat.Bmp);
+            int sHeight = screen1.Height;
+            int swidth = screen1.Width;
+            MessageBox.Show("width:= " + swidth + "  height:= " + sHeight);*/
+
+            // screen.Save("c:\\button.gif", System.Drawing.Imaging.ImageFormat.Gif);
+           /* string fileName = $"{DateTime.Now.ToString("yyyyMMdd_hh:mm:ss")}SnapShot";
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.InitialDirectory = @"C:\\SnapShotFolder";
+            saveFile.Title = "snapShot";
+            saveFile.DefaultExt = "bmp";
+            saveFile.Filter = "Bmp files(*.bmp)|*.bmp";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                fileName = saveFile.FileName.ToString();
+            }*/
         }
     }
 }

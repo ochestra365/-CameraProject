@@ -29,22 +29,19 @@ namespace 내힘으로만들CameraProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
             this.button1 = new System.Windows.Forms.Button();
-            this.BtnSave = new System.Windows.Forms.Button();
+            this.BtnSnapShot = new System.Windows.Forms.Button();
             this.LblTime = new System.Windows.Forms.Label();
             this.LblStatus = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxIpl1
             // 
-            this.pictureBoxIpl1.Location = new System.Drawing.Point(82, 12);
+            this.pictureBoxIpl1.Location = new System.Drawing.Point(82, 70);
             this.pictureBoxIpl1.Name = "pictureBoxIpl1";
-            this.pictureBoxIpl1.Size = new System.Drawing.Size(1890, 937);
+            this.pictureBoxIpl1.Size = new System.Drawing.Size(1890, 879);
             this.pictureBoxIpl1.TabIndex = 0;
             this.pictureBoxIpl1.TabStop = false;
             // 
@@ -54,18 +51,19 @@ namespace 내힘으로만들CameraProject
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "출력";
+            this.button1.Text = "Display";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // BtnSave
+            // BtnSnapShot
             // 
-            this.BtnSave.Location = new System.Drawing.Point(3, 527);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 23);
-            this.BtnSave.TabIndex = 2;
-            this.BtnSave.Text = "저장";
-            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSnapShot.Location = new System.Drawing.Point(3, 527);
+            this.BtnSnapShot.Name = "BtnSnapShot";
+            this.BtnSnapShot.Size = new System.Drawing.Size(75, 23);
+            this.BtnSnapShot.TabIndex = 2;
+            this.BtnSnapShot.Text = "Snapshot";
+            this.BtnSnapShot.UseVisualStyleBackColor = true;
+            this.BtnSnapShot.Click += new System.EventHandler(this.BtnSnapShot_Click);
             // 
             // LblTime
             // 
@@ -90,7 +88,7 @@ namespace 내힘으로만들CameraProject
             this.ClientSize = new System.Drawing.Size(1984, 961);
             this.Controls.Add(this.LblStatus);
             this.Controls.Add(this.LblTime);
-            this.Controls.Add(this.BtnSave);
+            this.Controls.Add(this.BtnSnapShot);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBoxIpl1);
             this.Name = "Form1";
@@ -106,11 +104,9 @@ namespace 내힘으로만들CameraProject
 
         private OpenCvSharp.UserInterface.PictureBoxIpl pictureBoxIpl1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.Button BtnSnapShot;
         private System.Windows.Forms.Label LblTime;
         private System.Windows.Forms.Label LblStatus;
-        private System.Windows.Forms.Timer timer1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
