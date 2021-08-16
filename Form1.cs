@@ -3,13 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using OpenCvSharp;//사용한 것.
 using OpenCvSharp.Extensions;//사용한 것
-using System.Diagnostics;
 using System.Threading;
-using System.Threading.Tasks;
-using System.IO;
-using System.ComponentModel;
-using System.Drawing.Imaging;
-using System.Drawing;
 namespace 내힘으로만들CameraProject
 {
     public partial class Form1 : Form
@@ -18,6 +12,7 @@ namespace 내힘으로만들CameraProject
         {
             InitializeComponent();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -25,10 +20,8 @@ namespace 내힘으로만들CameraProject
                 LblTime.Text = DateTime.Now.ToString();
                 Thread t1 = new Thread(DisplayPC);
                 t1.Start();
-                t1.IsBackground = true;
+                t1.IsBackground = true;//메인 스레드 종료 시 같이 종료되게 함.
                 Thread.Sleep(1000);
-              //  Thread t2 = new Thread(GetMomory);
-              //  t2.Start();
                 if (t1 != null)
                 {
                     LblStatus.Text = "기기와 통신포트가 연결되었습니다.";
@@ -45,6 +38,9 @@ namespace 내힘으로만들CameraProject
 
         }
 
+        /// <summary>
+        /// 화면을 나오게 하는 메서드(구글에 있음 추가한 것은 가비지 컬렉터로 메모리 누수 잡은 것임)
+        /// </summary>
         private void DisplayPC()
         {
             string rtspaddr = "rtsp://admin:1234@192.168.78.100:554";//연결스트링
@@ -76,20 +72,13 @@ namespace 내힘으로만들CameraProject
                 }
             }
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-          // Form f2 = new WebBrowserControl();
-          // f2.Show();
-        }
-        /// <summary>
-        /// snapshot yyyyMMdd
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+    
         private void BtnSnapShot_Click(object sender, EventArgs e)
         {
+
+
            
-            Bitmap screen1 = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+           /* Bitmap screen1 = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
             using (Graphics g = Graphics.FromImage(screen1))
             {
                 System.Drawing.Size a = new System.Drawing.Size(SystemInformation.VirtualScreen.Width, SystemInformation.VirtualScreen.Height);
@@ -106,7 +95,7 @@ namespace 내힘으로만들CameraProject
             screen1.Save("C:\\SnapShotFolder\\"  + "screen.bmp", ImageFormat.Bmp);
             int sHeight = screen1.Height;
             int swidth = screen1.Width;
-            MessageBox.Show("width:= " + swidth + "  height:= " + sHeight);
+            MessageBox.Show("width:= " + swidth + "  height:= " + sHeight);*/
 
             // screen.Save("c:\\button.gif", System.Drawing.Imaging.ImageFormat.Gif);
            /* string fileName = $"{DateTime.Now.ToString("yyyyMMdd_hh:mm:ss")}SnapShot";
@@ -120,7 +109,5 @@ namespace 내힘으로만들CameraProject
                 fileName = saveFile.FileName.ToString();
             }*/
         }
-
-       
     }
 }

@@ -95,7 +95,7 @@ namespace 내힘으로만들CameraProject
             this.Controls.Add(this.pictureBoxIpl1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
