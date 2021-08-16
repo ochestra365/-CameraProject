@@ -75,17 +75,6 @@ namespace 내힘으로만들CameraProject
                 }
             }
         }
-
-      
-
-
-
-
-        /// <summary>
-        /// 웹 브라우저를 통해서 솔루션을 여는 것.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
           // Form f2 = new WebBrowserControl();

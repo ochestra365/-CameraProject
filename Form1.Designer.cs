@@ -41,15 +41,15 @@ namespace 내힘으로만들CameraProject
             // 
             // pictureBoxIpl1
             // 
-            this.pictureBoxIpl1.Location = new System.Drawing.Point(82, 70);
+            this.pictureBoxIpl1.Location = new System.Drawing.Point(2, 70);
             this.pictureBoxIpl1.Name = "pictureBoxIpl1";
-            this.pictureBoxIpl1.Size = new System.Drawing.Size(1890, 879);
+            this.pictureBoxIpl1.Size = new System.Drawing.Size(1920, 1080);
             this.pictureBoxIpl1.TabIndex = 0;
             this.pictureBoxIpl1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 372);
+            this.button1.Location = new System.Drawing.Point(254, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnSnapShot
             // 
-            this.BtnSnapShot.Location = new System.Drawing.Point(3, 527);
+            this.BtnSnapShot.Location = new System.Drawing.Point(362, 4);
             this.BtnSnapShot.Name = "BtnSnapShot";
             this.BtnSnapShot.Size = new System.Drawing.Size(75, 23);
             this.BtnSnapShot.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace 내힘으로만들CameraProject
             // LblTime
             // 
             this.LblTime.AutoSize = true;
-            this.LblTime.Location = new System.Drawing.Point(94, 32);
+            this.LblTime.Location = new System.Drawing.Point(12, 9);
             this.LblTime.Name = "LblTime";
             this.LblTime.Size = new System.Drawing.Size(0, 12);
             this.LblTime.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace 내힘으로만들CameraProject
             // LblStatus
             // 
             this.LblStatus.AutoSize = true;
-            this.LblStatus.Location = new System.Drawing.Point(94, 55);
+            this.LblStatus.Location = new System.Drawing.Point(12, 32);
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(0, 12);
             this.LblStatus.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace 내힘으로만들CameraProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1984, 961);
+            this.ClientSize = new System.Drawing.Size(1934, 1061);
             this.Controls.Add(this.LblStatus);
             this.Controls.Add(this.LblTime);
             this.Controls.Add(this.BtnSnapShot);
