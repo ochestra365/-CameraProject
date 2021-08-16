@@ -25,6 +25,7 @@ namespace 내힘으로만들CameraProject
                 LblTime.Text = DateTime.Now.ToString();
                 Thread t1 = new Thread(DisplayPC);
                 t1.Start();
+                t1.IsBackground = true;
                 Thread.Sleep(1000);
               //  Thread t2 = new Thread(GetMomory);
               //  t2.Start();
@@ -119,5 +120,7 @@ namespace 내힘으로만들CameraProject
                 fileName = saveFile.FileName.ToString();
             }*/
         }
+
+       
     }
 }

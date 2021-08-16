@@ -59,7 +59,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnSnapShot
             // 
-            this.BtnSnapShot.Location = new System.Drawing.Point(362, 4);
+            this.BtnSnapShot.Location = new System.Drawing.Point(335, 9);
             this.BtnSnapShot.Name = "BtnSnapShot";
             this.BtnSnapShot.Size = new System.Drawing.Size(75, 23);
             this.BtnSnapShot.TabIndex = 2;
