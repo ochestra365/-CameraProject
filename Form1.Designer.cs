@@ -29,24 +29,28 @@ namespace 내힘으로만들CameraProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.LblTime = new System.Windows.Forms.Label();
+            this.LblStatus = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxIpl1
             // 
-            this.pictureBoxIpl1.Location = new System.Drawing.Point(41, 12);
+            this.pictureBoxIpl1.Location = new System.Drawing.Point(74, -2);
             this.pictureBoxIpl1.Name = "pictureBoxIpl1";
-            this.pictureBoxIpl1.Size = new System.Drawing.Size(800, 450);
+            this.pictureBoxIpl1.Size = new System.Drawing.Size(1900, 950);
             this.pictureBoxIpl1.TabIndex = 0;
             this.pictureBoxIpl1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(587, 550);
+            this.button1.Location = new System.Drawing.Point(528, 410);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -56,7 +60,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(677, 550);
+            this.BtnSave.Location = new System.Drawing.Point(618, 410);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
             this.BtnSave.TabIndex = 2;
@@ -66,18 +70,25 @@ namespace 내힘으로만들CameraProject
             // LblTime
             // 
             this.LblTime.AutoSize = true;
-            this.LblTime.Location = new System.Drawing.Point(68, 550);
+            this.LblTime.Location = new System.Drawing.Point(62, 392);
             this.LblTime.Name = "LblTime";
-            this.LblTime.Size = new System.Drawing.Size(38, 12);
+            this.LblTime.Size = new System.Drawing.Size(0, 12);
             this.LblTime.TabIndex = 3;
-            this.LblTime.Text = "label1";
-            this.LblTime.Click += new System.EventHandler(this.LblTime_Click);
+            // 
+            // LblStatus
+            // 
+            this.LblStatus.AutoSize = true;
+            this.LblStatus.Location = new System.Drawing.Point(62, 421);
+            this.LblStatus.Name = "LblStatus";
+            this.LblStatus.Size = new System.Drawing.Size(0, 12);
+            this.LblStatus.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 641);
+            this.ClientSize = new System.Drawing.Size(1984, 961);
+            this.Controls.Add(this.LblStatus);
             this.Controls.Add(this.LblTime);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.button1);
@@ -97,6 +108,9 @@ namespace 내힘으로만들CameraProject
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Label LblTime;
+        private System.Windows.Forms.Label LblStatus;
+        private System.Windows.Forms.Timer timer1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
