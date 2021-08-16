@@ -75,39 +75,15 @@ namespace 내힘으로만들CameraProject
     
         private void BtnSnapShot_Click(object sender, EventArgs e)
         {
-
-
-           
-           /* Bitmap screen1 = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-            using (Graphics g = Graphics.FromImage(screen1))
+            Screen scr = Screen.PrimaryScreen;
+            Rectangle rect = scr.Bounds;
+            Bitmap bmp = new Bitmap(rect.Width, rect.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
             {
-                System.Drawing.Size a = new System.Drawing.Size(SystemInformation.VirtualScreen.Width, SystemInformation.VirtualScreen.Height);
-                System.Drawing.Size reg = new System.Drawing.Size(this.Width, this.Height);
-                System.Drawing.Size def = new System.Drawing.Size(500, 800);
-
-               // g.CopyFromScreen(this.Left, this.Top, int.Parse(textBox1.Text), 100, def);
-
+                g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
             }
-            pictureBoxIpl1.SizeMode = PictureBoxSizeMode.Zoom;
-
-            pictureBoxIpl1.Image = screen1;
-
-            screen1.Save("C:\\SnapShotFolder\\"  + "screen.bmp", ImageFormat.Bmp);
-            int sHeight = screen1.Height;
-            int swidth = screen1.Width;
-            MessageBox.Show("width:= " + swidth + "  height:= " + sHeight);*/
-
-            // screen.Save("c:\\button.gif", System.Drawing.Imaging.ImageFormat.Gif);
-           /* string fileName = $"{DateTime.Now.ToString("yyyyMMdd_hh:mm:ss")}SnapShot";
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.InitialDirectory = @"C:\\SnapShotFolder";
-            saveFile.Title = "snapShot";
-            saveFile.DefaultExt = "bmp";
-            saveFile.Filter = "Bmp files(*.bmp)|*.bmp";
-            if (saveFile.ShowDialog() == DialogResult.OK)
-            {
-                fileName = saveFile.FileName.ToString();
-            }*/
+            var now = DateTime.Now.ToString("yyyyMMdd_hh:mm:ss");
+            bmp.Save(@"C:\temp\scr.bmp");
         }
     }
 }
