@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using OpenCvSharp;//사용한 것.
 using OpenCvSharp.Extensions;//사용한 것
 using System.Threading;
+using System.IO;
+
 namespace 내힘으로만들CameraProject
 {
     public partial class Form1 : Form
@@ -82,8 +84,7 @@ namespace 내힘으로만들CameraProject
             {
                 g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
             }
-            var now = DateTime.Now.ToString("yyyyMMdd_hh:mm:ss");
-            bmp.Save(@"C:\temp\scr.bmp");
+            bmp.Save(@"C:\temp\src.bmp");
         }
     }
 }
