@@ -42,15 +42,15 @@ namespace 내힘으로만들CameraProject
             // 
             // pictureBoxIpl1
             // 
-            this.pictureBoxIpl1.Location = new System.Drawing.Point(74, -2);
+            this.pictureBoxIpl1.Location = new System.Drawing.Point(82, 12);
             this.pictureBoxIpl1.Name = "pictureBoxIpl1";
-            this.pictureBoxIpl1.Size = new System.Drawing.Size(1900, 950);
+            this.pictureBoxIpl1.Size = new System.Drawing.Size(1890, 937);
             this.pictureBoxIpl1.TabIndex = 0;
             this.pictureBoxIpl1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(528, 410);
+            this.button1.Location = new System.Drawing.Point(3, 372);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(618, 410);
+            this.BtnSave.Location = new System.Drawing.Point(3, 527);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
             this.BtnSave.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace 내힘으로만들CameraProject
             // LblTime
             // 
             this.LblTime.AutoSize = true;
-            this.LblTime.Location = new System.Drawing.Point(62, 392);
+            this.LblTime.Location = new System.Drawing.Point(94, 32);
             this.LblTime.Name = "LblTime";
             this.LblTime.Size = new System.Drawing.Size(0, 12);
             this.LblTime.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace 내힘으로만들CameraProject
             // LblStatus
             // 
             this.LblStatus.AutoSize = true;
-            this.LblStatus.Location = new System.Drawing.Point(62, 421);
+            this.LblStatus.Location = new System.Drawing.Point(94, 55);
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(0, 12);
             this.LblStatus.TabIndex = 4;

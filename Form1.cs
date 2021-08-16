@@ -22,15 +22,18 @@ namespace 내힘으로만들CameraProject
             try
             {
                 LblTime.Text = DateTime.Now.ToString();
-                Thread worker = new Thread(DisplayPC);
-                worker.Start();
-                if (worker != null)
+                Thread t1 = new Thread(DisplayPC);
+                t1.Start();
+                Thread.Sleep(1000);
+              //  Thread t2 = new Thread(GetMomory);
+              //  t2.Start();
+                if (t1 != null)
                 {
                     LblStatus.Text = "기기와 통신포트가 연결되었습니다.";
                 }
                 else
                 {
-                    LblStatus.Text = "기기와 통신포트가 연결도지 않습니다.";
+                    LblStatus.Text = "기기와 통신포트가 연결되어 있지 않습니다.";
                 }
             }
             catch (Exception ex)
@@ -39,16 +42,16 @@ namespace 내힘으로만들CameraProject
             }
 
         }
+
+        private void GetMomory()
+        {
+            pictureBoxIpl1.Image.Dispose();
+        }
         private void DisplayPC()
         {
-            //pictureBoxIpl1.Image.Dispose();
-
             string rtspaddr = "rtsp://admin:1234@192.168.78.100:554";//연결스트링
             VideoCapture capture = new VideoCapture();//비디오 이미지 캡쳐
             capture.Open(rtspaddr);//연결스트링에 해당하는 거 열기
-            //비트맵 이미지 변환부분
-            //TypeConverter converter = TypeDescriptor.GetConverter(typeof(Bitmap));
-            //Bitmap b = (Bitmap)converter.ConvertFrom(capture);
             using (Mat image = new Mat())//오픈 CV에서 이미지 파일을 2차원 배열로 해서 출력.
             {
                 while (true)
@@ -63,12 +66,13 @@ namespace 내힘으로만들CameraProject
                         {
                             Bitmap bitmap = BitmapConverter.ToBitmap(image);//비트맵으로 바꿔서 form에 출력
                             pictureBoxIpl1.Image = bitmap;//컨트롤러의 이미지 속성에 대입
+                            //pictureBoxIpl1.Image.Dispose();
+                            GC.Collect();//가비지 컬렉터로 메모리 누수를 잡아준다.
                         }
                         if (Cv2.WaitKey(1) >= 0) break;//delay가 1초이상이면 반복문을 탈출함== 화면이 멈춤
                     }
                     catch (Exception ex)
                     {
-                        //pictureBoxIpl1.Image.Dispose();
                         MessageBox.Show($"관리자에게 이 메세지를 보여주세요\n관리자 : 박성철\n연락처 : 010.2874.1479\n\nError : {ex}");break;
                     }
                 }
