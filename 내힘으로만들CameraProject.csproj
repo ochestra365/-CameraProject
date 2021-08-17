@@ -107,6 +107,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="깃허브에 올릴 이미지\DISPLAY버튼 누르기 전.png" />
+    <Content Include="깃허브에 올릴 이미지\DISPLAY버튼 누른 후.png" />
+    <Content Include="깃허브에 올릴 이미지\HoneyWellCam.png" />
+    <Content Include="깃허브에 올릴 이미지\RFID.png" />
+    <Content Include="깃허브에 올릴 이미지\경로 파일 저장.png" />
+    <Content Include="깃허브에 올릴 이미지\경로 파일 저장2.png" />
+    <Content Include="깃허브에 올릴 이미지\경로 파일 저장3.png" />
+    <Content Include="깃허브에 올릴 이미지\메모리 문제.png" />
+    <Content Include="깃허브에 올릴 이미지\메모리 문제2.png" />
+    <Content Include="깃허브에 올릴 이미지\메모리문제3.png" />
+    <Content Include="깃허브에 올릴 이미지\화면구동.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
