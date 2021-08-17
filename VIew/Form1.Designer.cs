@@ -48,7 +48,7 @@ namespace 내힘으로만들CameraProject
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(254, 9);
+            this.button1.Location = new System.Drawing.Point(269, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnSnapShot
             // 
-            this.BtnSnapShot.Location = new System.Drawing.Point(335, 9);
+            this.BtnSnapShot.Location = new System.Drawing.Point(350, 4);
             this.BtnSnapShot.Name = "BtnSnapShot";
             this.BtnSnapShot.Size = new System.Drawing.Size(75, 23);
             this.BtnSnapShot.TabIndex = 2;
@@ -79,12 +79,13 @@ namespace 내힘으로만들CameraProject
             this.LblStatus.AutoSize = true;
             this.LblStatus.Location = new System.Drawing.Point(12, 32);
             this.LblStatus.Name = "LblStatus";
-            this.LblStatus.Size = new System.Drawing.Size(0, 12);
+            this.LblStatus.Size = new System.Drawing.Size(253, 12);
             this.LblStatus.TabIndex = 4;
+            this.LblStatus.Text = "기기와 통신포트가 아직 연결되지 않았습니다.";
             // 
             // BtnRFID
             // 
-            this.BtnRFID.Location = new System.Drawing.Point(416, 9);
+            this.BtnRFID.Location = new System.Drawing.Point(431, 4);
             this.BtnRFID.Name = "BtnRFID";
             this.BtnRFID.Size = new System.Drawing.Size(75, 23);
             this.BtnRFID.TabIndex = 5;

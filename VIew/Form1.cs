@@ -24,14 +24,6 @@ namespace 내힘으로만들CameraProject
                 t1.Start();
                 t1.IsBackground = true;//메인 스레드 종료 시 같이 종료되게 함.
                 Thread.Sleep(1000);
-                if (t1 != null)
-                {
-                    LblStatus.Text = "기기와 통신포트가 연결되었습니다.";
-                }
-                else
-                {
-                    LblStatus.Text = "기기와 통신포트가 연결되어 있지 않습니다.";
-                }
             }
             catch (Exception ex)
             {
@@ -60,10 +52,14 @@ namespace 내힘으로만들CameraProject
                         }
                         if (image.Size().Width > 0 && image.Size().Height > 0)//이미지 사이즈가 존재하면 0보다 크면
                         {
+                            LblStatus.Text = "기기와 통신포트가 연결되었습니다.";
                             Bitmap bitmap = BitmapConverter.ToBitmap(image);//비트맵으로 바꿔서 form에 출력
                             pictureBoxIpl1.Image = bitmap;//컨트롤러의 이미지 속성에 대입
-                            //pictureBoxIpl1.Image.Dispose();
                             GC.Collect();//가비지 컬렉터로 메모리 누수를 잡아준다.
+                        }
+                        else
+                        {
+                            LblStatus.Text = "기기와 통신포트가 연결되어 있지 않습니다.";
                         }
                         if (Cv2.WaitKey(1) >= 0) break;//delay가 1초이상이면 반복문을 탈출함== 화면이 멈춤
                     }
