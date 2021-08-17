@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using OpenCvSharp;//사용한 것.
 using OpenCvSharp.Extensions;//사용한 것
 using System.Threading;
-using System.IO;
+using System.Drawing.Imaging;
 
 namespace 내힘으로만들CameraProject
 {
@@ -77,14 +77,23 @@ namespace 내힘으로만들CameraProject
     
         private void BtnSnapShot_Click(object sender, EventArgs e)
         {
-            Screen scr = Screen.PrimaryScreen;
-            Rectangle rect = scr.Bounds;
-            Bitmap bmp = new Bitmap(rect.Width, rect.Height);
-            using (Graphics g = Graphics.FromImage(bmp))
+            try
             {
-                g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
+                Screen scr = Screen.PrimaryScreen;
+                Rectangle rect = scr.Bounds;
+                Bitmap bmp = new Bitmap(rect.Width, rect.Height);
+                using (Graphics g = Graphics.FromImage(bmp))
+                {
+                    g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
+                }
+                string now = DateTime.Now.ToString("yyyyMMdd_hh:mm:ss");
+                bmp.Save(@"C:\temp\src.png",ImageFormat.Png);
             }
-            bmp.Save(@"C:\temp\src.bmp");
+            catch (Exception ex)
+            {
+                MessageBox.Show($"관리자에게 이 메세지를 보여주세요\n관리자 : 박성철\n연락처 : 010.2874.1479\n\nError : {ex}");
+            }
+            
         }
     }
 }
