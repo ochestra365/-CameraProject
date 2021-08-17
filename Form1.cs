@@ -86,13 +86,10 @@ namespace 내힘으로만들CameraProject
                 {
                     g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
                 }
-                bmp.Save(@"C:\temp\src.png",ImageFormat.Png);
-                string now = $"{DateTime.Now.ToString("yyyyMMdd_hh:mm:ss")}.png";
-                string oldName = "C:\\temp\\src.png";
-                string newName = "C:\\temp\\src2.png";
-                Rename("C:\\temp", oldName, now);
-
-                //File.Copy(oldName, newName);
+                string now = DateTime.Now.ToString("yyyMMdd_hhmmss");
+                bmp.Save(@"C:\temp\src.png",ImageFormat.Png);//일단 파일은 얘로 저장하는데
+                FileExistCheck(@"C:\temp\src.png");//얘가 존재하는 지 파악하는 메서드 왜냐하면 같은 파일이 2번 존재할 필요는 없으니까
+                File.Move(@"C:\temp\src.png",$"C:\\temp\\{now}.png");//저장 파일명을현재 날짜로 변환시켜줌
             }
             catch (Exception ex)
             {
@@ -101,20 +98,6 @@ namespace 내힘으로만들CameraProject
             
         }
 
-        private static string Rename(string filePath,string oldFile,string newFile)
-        {
-            oldFile = filePath + "\\" + oldFile;
-            newFile = filePath + "\\" + newFile;
-            if (FileExistCheck(oldFile))
-            {
-                System.IO.File.Move(oldFile, newFile);
-                return "FILE NAME CHAGE ::" + oldFile + ">>" + newFile;
-            }
-            else
-            {
-                return "FILE NO EXISTS";
-            }
-        }
         /// <summary>
         /// 파일이 존재하는 지 확인하는 메서드
         /// </summary>
@@ -122,7 +105,7 @@ namespace 내힘으로만들CameraProject
         /// <returns></returns>
         private static bool FileExistCheck(string oldFile)
         {
-            if (System.IO.File.Exists(oldFile))
+            if (File.Exists(oldFile))
             {
                 return true;
             }
