@@ -36,6 +36,7 @@ namespace 내힘으로만들CameraProject
             this.LblTime = new System.Windows.Forms.Label();
             this.LblStatus = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,11 +84,21 @@ namespace 내힘으로만들CameraProject
             this.LblStatus.Size = new System.Drawing.Size(0, 12);
             this.LblStatus.TabIndex = 4;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(416, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1934, 1061);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.LblStatus);
             this.Controls.Add(this.LblTime);
             this.Controls.Add(this.BtnSnapShot);
@@ -95,7 +106,6 @@ namespace 내힘으로만들CameraProject
             this.Controls.Add(this.pictureBoxIpl1);
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,6 +120,7 @@ namespace 내힘으로만들CameraProject
         private System.Windows.Forms.Label LblTime;
         private System.Windows.Forms.Label LblStatus;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
