@@ -29,6 +29,7 @@ namespace 내힘으로만들CameraProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnSnapShot = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@ namespace 내힘으로만들CameraProject
             this.LblStatus = new System.Windows.Forms.Label();
             this.BtnRFID = new System.Windows.Forms.Button();
             this.BtnStopwatch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,11 +107,26 @@ namespace 내힘으로만들CameraProject
             this.BtnStopwatch.UseVisualStyleBackColor = true;
             this.BtnStopwatch.Click += new System.EventHandler(this.BtnStopwatch_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 12);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1934, 1061);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnStopwatch);
             this.Controls.Add(this.BtnRFID);
             this.Controls.Add(this.LblStatus);
@@ -133,6 +151,8 @@ namespace 내힘으로만들CameraProject
         private System.Windows.Forms.Label LblStatus;
         private System.Windows.Forms.Button BtnRFID;
         private System.Windows.Forms.Button BtnStopwatch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

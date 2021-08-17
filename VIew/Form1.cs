@@ -20,6 +20,7 @@ namespace 내힘으로만들CameraProject
             try
             {
                 LblTime.Text = DateTime.Now.ToString();
+                Ticktock();
                 Thread t1 = new Thread(DisplayPC);
                 t1.Start();
                 t1.IsBackground = true;//메인 스레드 종료 시 같이 종료되게 함.
@@ -31,7 +32,13 @@ namespace 내힘으로만들CameraProject
             }
 
         }
-
+        private void Ticktock()
+        {
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1000;
+            timer.Tick += new EventHandler(timer1_Tick);
+            timer.Start();
+        }
         /// <summary>
         /// 화면을 나오게 하는 메서드(구글에 있음 추가한 것은 가비지 컬렉터로 메모리 누수 잡은 것임)
         /// </summary>
@@ -120,6 +127,16 @@ namespace 내힘으로만들CameraProject
         {
             Form f2 = new 내힘으로만들CameraProject.VIew.watch();
             f2.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
