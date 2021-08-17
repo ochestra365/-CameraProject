@@ -42,7 +42,7 @@ namespace 내힘으로만들CameraProject
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
-
+            richTextBox1.Text = string.Empty;
         }
 
         private void BtnOpenPort_Click(object sender, EventArgs e)
