@@ -95,5 +95,11 @@ namespace 내힘으로만들CameraProject
             }
             
         }
+
+        private void BtnRFID_Click(object sender, EventArgs e)
+        {
+            Form f1 = new RFID();
+            f1.Show();
+        }
     }
 }
