@@ -115,5 +115,11 @@ namespace 내힘으로만들CameraProject
             Form f1 = new RFID();
             f1.Show();
         }
+
+        private void BtnStopwatch_Click(object sender, EventArgs e)
+        {
+            Form f2 = new 내힘으로만들CameraProject.VIew.watch();
+            f2.Show();
+        }
     }
 }

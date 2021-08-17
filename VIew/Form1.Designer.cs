@@ -35,6 +35,7 @@ namespace 내힘으로만들CameraProject
             this.LblTime = new System.Windows.Forms.Label();
             this.LblStatus = new System.Windows.Forms.Label();
             this.BtnRFID = new System.Windows.Forms.Button();
+            this.BtnStopwatch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +94,22 @@ namespace 내힘으로만들CameraProject
             this.BtnRFID.UseVisualStyleBackColor = true;
             this.BtnRFID.Click += new System.EventHandler(this.BtnRFID_Click);
             // 
+            // BtnStopwatch
+            // 
+            this.BtnStopwatch.Location = new System.Drawing.Point(512, 4);
+            this.BtnStopwatch.Name = "BtnStopwatch";
+            this.BtnStopwatch.Size = new System.Drawing.Size(75, 23);
+            this.BtnStopwatch.TabIndex = 6;
+            this.BtnStopwatch.Text = "StopWatch";
+            this.BtnStopwatch.UseVisualStyleBackColor = true;
+            this.BtnStopwatch.Click += new System.EventHandler(this.BtnStopwatch_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1934, 1061);
+            this.Controls.Add(this.BtnStopwatch);
             this.Controls.Add(this.BtnRFID);
             this.Controls.Add(this.LblStatus);
             this.Controls.Add(this.LblTime);
@@ -120,6 +132,7 @@ namespace 내힘으로만들CameraProject
         private System.Windows.Forms.Label LblTime;
         private System.Windows.Forms.Label LblStatus;
         private System.Windows.Forms.Button BtnRFID;
+        private System.Windows.Forms.Button BtnStopwatch;
     }
 }
 

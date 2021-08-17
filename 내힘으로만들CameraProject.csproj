@@ -78,6 +78,12 @@
     <Compile Include="VIew\RFID.Designer.cs">
       <DependentUpon>RFID.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIew\watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIew\watch.Designer.cs">
+      <DependentUpon>watch.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="VIew\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="VIew\RFID.resx">
       <DependentUpon>RFID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIew\watch.resx">
+      <DependentUpon>watch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
