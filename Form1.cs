@@ -5,7 +5,7 @@ using OpenCvSharp;//사용한 것.
 using OpenCvSharp.Extensions;//사용한 것
 using System.Threading;
 using System.Drawing.Imaging;
-
+using System.IO;
 namespace 내힘으로만들CameraProject
 {
     public partial class Form1 : Form
@@ -86,8 +86,13 @@ namespace 내힘으로만들CameraProject
                 {
                     g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
                 }
-                string now = DateTime.Now.ToString("yyyyMMdd_hh:mm:ss");
                 bmp.Save(@"C:\temp\src.png",ImageFormat.Png);
+                string now = $"{DateTime.Now.ToString("yyyyMMdd_hh:mm:ss")}.png";
+                string oldName = "C:\\temp\\src.png";
+                string newName = "C:\\temp\\src2.png";
+                Rename("C:\\temp", oldName, now);
+
+                //File.Copy(oldName, newName);
             }
             catch (Exception ex)
             {
@@ -96,6 +101,36 @@ namespace 내힘으로만들CameraProject
             
         }
 
+        private static string Rename(string filePath,string oldFile,string newFile)
+        {
+            oldFile = filePath + "\\" + oldFile;
+            newFile = filePath + "\\" + newFile;
+            if (FileExistCheck(oldFile))
+            {
+                System.IO.File.Move(oldFile, newFile);
+                return "FILE NAME CHAGE ::" + oldFile + ">>" + newFile;
+            }
+            else
+            {
+                return "FILE NO EXISTS";
+            }
+        }
+        /// <summary>
+        /// 파일이 존재하는 지 확인하는 메서드
+        /// </summary>
+        /// <param name="oldFile"></param>
+        /// <returns></returns>
+        private static bool FileExistCheck(string oldFile)
+        {
+            if (System.IO.File.Exists(oldFile))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void BtnRFID_Click(object sender, EventArgs e)
         {
             Form f1 = new RFID();
