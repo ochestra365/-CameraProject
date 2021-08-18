@@ -47,14 +47,28 @@ namespace 내힘으로만들CameraProject
 
         private void BtnOpenPort_Click(object sender, EventArgs e)
         {
-            serialPort1.Open();
-            label6.Text = "현재 포트가 열렸습니다.";
+            try
+            {
+                serialPort1.Open();
+                label6.Text = "현재 포트가 열렸습니다.";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error : {ex}");
+            }
         }
 
         private void BtnClosePort_Click(object sender, EventArgs e)
         {
-            serialPort1.Close();
-            label6.Text = "현재 포트를 닫았습니다.";
+            try
+            {
+                serialPort1.Close();
+                label6.Text = "현재 포트를 닫았습니다.";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error : {ex}");
+            }
         }
 
         private void ChkAutoCR_LF_CheckedChanged(object sender, EventArgs e)
@@ -82,14 +96,28 @@ namespace 내힘으로만들CameraProject
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            this.Invoke(new EventHandler(sportRCV));//스레드 위반을 피하기 위해
+            try
+            {
+                this.Invoke(new EventHandler(sportRCV));//스레드 위반을 피하기 위해
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error : {ex}");
+            }
         }
 
         private void sportRCV(object sender, EventArgs e)
         {
-            if (serialPort1.BytesToRead > 0)
+            try
             {
-                richTextBox1.Text = serialPort1.ReadExisting();
+                if (serialPort1.BytesToRead > 0)
+                {
+                    richTextBox1.Text = serialPort1.ReadExisting();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error : {ex}");
             }
         }
     }
