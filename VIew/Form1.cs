@@ -138,5 +138,17 @@ namespace 내힘으로만들CameraProject
         {
             label1.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void BtnDate_Click(object sender, EventArgs e)
+        {
+            Form f3 = new 내힘으로만들CameraProject.VIew.CaculatingDate();
+            f3.Show();
+        }
+
+        private void BtnAlarm_Click(object sender, EventArgs e)
+        {
+            Form f4 = new 내힘으로만들CameraProject.VIew.DigitalAlarm();
+            f4.Show();
+        }
     }
 }

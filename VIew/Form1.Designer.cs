@@ -39,6 +39,8 @@ namespace 내힘으로만들CameraProject
             this.BtnStopwatch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BtnDate = new System.Windows.Forms.Button();
+            this.BtnAlarm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +122,33 @@ namespace 내힘으로만들CameraProject
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // BtnDate
+            // 
+            this.BtnDate.Location = new System.Drawing.Point(593, 4);
+            this.BtnDate.Name = "BtnDate";
+            this.BtnDate.Size = new System.Drawing.Size(75, 23);
+            this.BtnDate.TabIndex = 8;
+            this.BtnDate.Text = "Date";
+            this.BtnDate.UseVisualStyleBackColor = true;
+            this.BtnDate.Click += new System.EventHandler(this.BtnDate_Click);
+            // 
+            // BtnAlarm
+            // 
+            this.BtnAlarm.Location = new System.Drawing.Point(674, 4);
+            this.BtnAlarm.Name = "BtnAlarm";
+            this.BtnAlarm.Size = new System.Drawing.Size(109, 23);
+            this.BtnAlarm.TabIndex = 9;
+            this.BtnAlarm.Text = "Digital Alarm";
+            this.BtnAlarm.UseVisualStyleBackColor = true;
+            this.BtnAlarm.Click += new System.EventHandler(this.BtnAlarm_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1934, 1061);
+            this.Controls.Add(this.BtnAlarm);
+            this.Controls.Add(this.BtnDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnStopwatch);
             this.Controls.Add(this.BtnRFID);
@@ -152,6 +176,8 @@ namespace 내힘으로만들CameraProject
         private System.Windows.Forms.Button BtnStopwatch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button BtnDate;
+        private System.Windows.Forms.Button BtnAlarm;
     }
 }
 
