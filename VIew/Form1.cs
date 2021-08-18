@@ -150,5 +150,11 @@ namespace 내힘으로만들CameraProject
             Form f4 = new 내힘으로만들CameraProject.VIew.DigitalAlarm();
             f4.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Form f5 = new 내힘으로만들CameraProject.VIew.Login();
+            f5.Show();
+        }
     }
 }
