@@ -77,7 +77,12 @@ namespace 내힘으로만들CameraProject
                 }
             }
         }
-    
+        
+        /// <summary>
+        /// 기능만 구현해 놓았음. RFID읽으면 스냅샷 찍게 해야 함. Delegate+Invoke+Action을 사용해야 함.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnSnapShot_Click(object sender, EventArgs e)
         {
             try
@@ -155,6 +160,11 @@ namespace 내힘으로만들CameraProject
         {
             Form f5 = new 내힘으로만들CameraProject.VIew.Login();
             f5.Show();
+        }
+
+        private void BtnWebRtc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,6 +41,7 @@ namespace 내힘으로만들CameraProject
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BtnDate = new System.Windows.Forms.Button();
             this.BtnAlarm = new System.Windows.Forms.Button();
+            this.BtnWebRtc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,11 +143,22 @@ namespace 내힘으로만들CameraProject
             this.BtnAlarm.UseVisualStyleBackColor = true;
             this.BtnAlarm.Click += new System.EventHandler(this.BtnAlarm_Click);
             // 
+            // BtnWebRtc
+            // 
+            this.BtnWebRtc.Location = new System.Drawing.Point(789, 4);
+            this.BtnWebRtc.Name = "BtnWebRtc";
+            this.BtnWebRtc.Size = new System.Drawing.Size(75, 23);
+            this.BtnWebRtc.TabIndex = 10;
+            this.BtnWebRtc.Text = "WebRTC";
+            this.BtnWebRtc.UseVisualStyleBackColor = true;
+            this.BtnWebRtc.Click += new System.EventHandler(this.BtnWebRtc_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1934, 1061);
+            this.Controls.Add(this.BtnWebRtc);
             this.Controls.Add(this.BtnAlarm);
             this.Controls.Add(this.BtnDate);
             this.Controls.Add(this.label1);
@@ -179,6 +191,7 @@ namespace 내힘으로만들CameraProject
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button BtnDate;
         private System.Windows.Forms.Button BtnAlarm;
+        private System.Windows.Forms.Button BtnWebRtc;
     }
 }
 

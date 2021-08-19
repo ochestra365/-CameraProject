@@ -129,6 +129,7 @@
     <EmbeddedResource Include="VIew\watch.resx">
       <DependentUpon>watch.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".bin\node.cmd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
