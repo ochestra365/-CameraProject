@@ -87,7 +87,6 @@ namespace 내힘으로만들CameraProject
                 serialPort1.StopBits = StopBits.One;//정지비트는 1
                 serialPort1.Open();
                 serialPort1.DataReceived += new SerialDataReceivedEventHandler(serialPort1_DataReceived);//이벤트 발생
-                GC.Collect();
             }
             catch (Exception ex)
             {
@@ -114,6 +113,7 @@ namespace 내힘으로만들CameraProject
                 if (serialPort1.BytesToRead > 0)
                 {
                     richTextBox1.Text = serialPort1.ReadExisting();
+                    GC.Collect();
                 }
             }
             catch (Exception ex)
