@@ -180,6 +180,7 @@
     <Content Include="Resource\전략.jpg" />
     <Content Include="Resource\전략2.jpg" />
     <Content Include="Resource\전략3.jpg" />
+    <Content Include="Resource\정보처리기사.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
