@@ -98,7 +98,7 @@ namespace 내힘으로만들CameraProject
         {
             try
             {
-                this.Invoke(new EventHandler(sportRCV));//스레드 위반을 피하기 위해
+                this.Invoke(new EventHandler(sportRCV));//스레드 위반을 피하기 위해 시그널링을 주는 것임. 호출할 떄만 스레드가 돌아가도록 하는 것이다.
             }
             catch (Exception ex)
             {
@@ -113,7 +113,7 @@ namespace 내힘으로만들CameraProject
                 if (serialPort1.BytesToRead > 0)
                 {
                     richTextBox1.Text = serialPort1.ReadExisting();
-                    GC.Collect();
+                    GC.Collect();//메모리 누수를 잡아서 불필요한 데이터들이 수거되서 다음 데이터가 들어올 배열공간을 만든다.
                 }
             }
             catch (Exception ex)

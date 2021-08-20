@@ -24,7 +24,7 @@ namespace 내힘으로만들CameraProject
                 Thread t1 = new Thread(DisplayPC);
                 t1.Start();
                 t1.IsBackground = true;//메인 스레드 종료 시 같이 종료되게 함.
-                Thread.Sleep(1000);
+                Thread.Sleep(1000);//없으면 뭔가 불안정한 반응을 보인다.
             }
             catch (Exception ex)
             {
@@ -32,9 +32,12 @@ namespace 내힘으로만들CameraProject
             }
 
         }
+        /// <summary>
+        /// 현재 시간을 나타내는 기능을 의미한다.
+        /// </summary>
         private void Ticktock()
         {
-            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();//컴파일러가 모호하다고 반응해서 경로지정을 해줌.
             timer.Interval = 1000;
             timer.Tick += new EventHandler(timer1_Tick);
             timer.Start();
@@ -44,7 +47,7 @@ namespace 내힘으로만들CameraProject
         /// </summary>
         private void DisplayPC()
         {
-            string rtspaddr = "rtsp://admin:1234@192.168.78.100:554";//연결스트링
+            string rtspaddr = "rtsp://admin:1234@192.168.78.100:554";//Honeywell 연결스트링(보안처리 잘해야 함.)
             VideoCapture capture = new VideoCapture();//비디오 이미지 캡쳐
             capture.Open(rtspaddr);//연결스트링에 해당하는 거 열기
             using (Mat image = new Mat())//오픈 CV에서 이미지 파일을 2차원 배열로 해서 출력.
@@ -57,7 +60,7 @@ namespace 내힘으로만들CameraProject
                         {
                             Cv2.WaitKey();//키 누르면 대기..기다리게 할것
                         }
-                        if (image.Size().Width > 0 && image.Size().Height > 0)//이미지 사이즈가 존재하면 0보다 크면
+                        if (image.Size().Width > 0 && image.Size().Height > 0)//이미지 사이즈가 존재하면
                         {
                             LblStatus.Text = "기기와 통신포트가 연결되었습니다.";
                             Bitmap bitmap = BitmapConverter.ToBitmap(image);//비트맵으로 바꿔서 form에 출력
@@ -134,10 +137,7 @@ namespace 내힘으로만들CameraProject
             f2.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -164,7 +164,7 @@ namespace 내힘으로만들CameraProject
 
         private void BtnWebRtc_Click(object sender, EventArgs e)
         {
-
+            //나중에 구현할 기능 현재 기술 습득중 내용은 웹 화상 통신
         }
     }
 }
