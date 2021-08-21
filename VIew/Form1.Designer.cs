@@ -55,6 +55,7 @@ namespace 내힘으로만들CameraProject
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.Location = new System.Drawing.Point(269, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -65,6 +66,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnSnapShot
             // 
+            this.BtnSnapShot.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnSnapShot.Location = new System.Drawing.Point(350, 4);
             this.BtnSnapShot.Name = "BtnSnapShot";
             this.BtnSnapShot.Size = new System.Drawing.Size(75, 23);
@@ -76,6 +78,7 @@ namespace 내힘으로만들CameraProject
             // LblTime
             // 
             this.LblTime.AutoSize = true;
+            this.LblTime.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTime.Location = new System.Drawing.Point(12, 9);
             this.LblTime.Name = "LblTime";
             this.LblTime.Size = new System.Drawing.Size(0, 12);
@@ -84,14 +87,16 @@ namespace 내힘으로만들CameraProject
             // LblStatus
             // 
             this.LblStatus.AutoSize = true;
+            this.LblStatus.Font = new System.Drawing.Font("나눔고딕코딩", 12F, System.Drawing.FontStyle.Bold);
             this.LblStatus.Location = new System.Drawing.Point(12, 32);
             this.LblStatus.Name = "LblStatus";
-            this.LblStatus.Size = new System.Drawing.Size(253, 12);
+            this.LblStatus.Size = new System.Drawing.Size(352, 16);
             this.LblStatus.TabIndex = 4;
             this.LblStatus.Text = "기기와 통신포트가 아직 연결되지 않았습니다.";
             // 
             // BtnRFID
             // 
+            this.BtnRFID.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnRFID.Location = new System.Drawing.Point(431, 4);
             this.BtnRFID.Name = "BtnRFID";
             this.BtnRFID.Size = new System.Drawing.Size(75, 23);
@@ -102,6 +107,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnStopwatch
             // 
+            this.BtnStopwatch.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnStopwatch.Location = new System.Drawing.Point(512, 4);
             this.BtnStopwatch.Name = "BtnStopwatch";
             this.BtnStopwatch.Size = new System.Drawing.Size(75, 23);
@@ -113,11 +119,12 @@ namespace 내힘으로만들CameraProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 55);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("나눔고딕코딩", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(1555, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 12);
+            this.label1.Size = new System.Drawing.Size(0, 53);
             this.label1.TabIndex = 7;
-//            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
             // 
@@ -125,6 +132,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnDate
             // 
+            this.BtnDate.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnDate.Location = new System.Drawing.Point(593, 4);
             this.BtnDate.Name = "BtnDate";
             this.BtnDate.Size = new System.Drawing.Size(75, 23);
@@ -135,6 +143,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnAlarm
             // 
+            this.BtnAlarm.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnAlarm.Location = new System.Drawing.Point(674, 4);
             this.BtnAlarm.Name = "BtnAlarm";
             this.BtnAlarm.Size = new System.Drawing.Size(109, 23);
@@ -145,6 +154,7 @@ namespace 내힘으로만들CameraProject
             // 
             // BtnWebRtc
             // 
+            this.BtnWebRtc.Font = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnWebRtc.Location = new System.Drawing.Point(789, 4);
             this.BtnWebRtc.Name = "BtnWebRtc";
             this.BtnWebRtc.Size = new System.Drawing.Size(75, 23);

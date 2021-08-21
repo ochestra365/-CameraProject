@@ -125,6 +125,9 @@ namespace 내힘으로만들CameraProject
                 return false;
             }
         }
+
+        #region 각종 View
+
         private void BtnRFID_Click(object sender, EventArgs e)
         {
             Form f1 = new RFID();
@@ -142,6 +145,7 @@ namespace 내힘으로만들CameraProject
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToLongTimeString();
+            label1.BackColor = Color.Transparent;
         }
 
         private void BtnDate_Click(object sender, EventArgs e)
@@ -166,5 +170,6 @@ namespace 내힘으로만들CameraProject
         {
             //나중에 구현할 기능 현재 기술 습득중 내용은 웹 화상 통신
         }
+        #endregion
     }
 }
