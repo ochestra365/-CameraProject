@@ -162,8 +162,8 @@ namespace 내힘으로만들CameraProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form f5 = new 내힘으로만들CameraProject.VIew.Login();
-            f5.Show();
+            /*Form f5 = new 내힘으로만들CameraProject.VIew.Login();
+            f5.Show();*/
         }
 
         private void BtnWebRtc_Click(object sender, EventArgs e)
