@@ -130,6 +130,8 @@
       <DependentUpon>watch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".bin\node.cmd" />
+    <None Include="Model\package-lock.json" />
+    <None Include="Model\package.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -146,7 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
@@ -177,6 +178,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\server.js" />
     <Content Include="Resource\전략.jpg" />
     <Content Include="Resource\전략2.jpg" />
     <Content Include="Resource\전략3.jpg" />

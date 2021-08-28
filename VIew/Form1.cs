@@ -50,7 +50,7 @@ namespace 내힘으로만들CameraProject
             string rtspaddr = "rtsp://admin:1234@192.168.78.100:554";//Honeywell 연결스트링(보안처리 잘해야 함.)
             VideoCapture capture = new VideoCapture();//비디오 이미지 캡쳐
             capture.Open(rtspaddr);//연결스트링에 해당하는 거 열기
-            using (Mat image = new Mat())//오픈 CV에서 이미지 파일을 2차원 배열로 해서 출력.
+            using (Mat image = new Mat())//오픈 CV에서 이미지 파일을 2차원 배열로 해서 출력. using 문으로 메모리 관리
             {
                 while (true)
                 {
@@ -90,17 +90,17 @@ namespace 내힘으로만들CameraProject
         {
             try
             {
-                Screen scr = Screen.PrimaryScreen;
-                Rectangle rect = scr.Bounds;
-                Bitmap bmp = new Bitmap(rect.Width, rect.Height);
-                using (Graphics g = Graphics.FromImage(bmp))
-                {
-                    g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
-                }
-                string now = DateTime.Now.ToString("yyyMMdd_hhmmss");
-                bmp.Save(@"C:\temp\src.png",ImageFormat.Png);//일단 파일은 얘로 저장하는데
-                FileExistCheck(@"C:\temp\src.png");//얘가 존재하는 지 파악하는 메서드 왜냐하면 같은 파일이 2번 존재할 필요는 없으니까
-                File.Move(@"C:\temp\src.png",$"C:\\temp\\{now}.png");//저장 파일명을현재 날짜로 변환시켜줌
+                 Screen scr = Screen.PrimaryScreen;//메인 화면 스크린
+                 Rectangle rect = scr.Bounds;//디스플레이 범위설정
+                 Bitmap bmp = new Bitmap(rect.Width, rect.Height);// 비트맵 형식으로 넓이 높이를 bmp에 저장한다.
+                 using (Graphics g = Graphics.FromImage(bmp))// 그래픽을 bmp에 가져온다.
+                 {
+                     g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);//스크린에서 그래픽을 복사해서 가져온다. 
+                 }
+                 string now = DateTime.Now.ToString("yyyMMdd_hhmmss");
+                 bmp.Save(@"C:\temp\src.png",ImageFormat.Png);//일단 파일은 얘로 저장하는데
+                 FileExistCheck(@"C:\temp\src.png");//얘가 존재하는 지 파악하는 메서드 왜냐하면 같은 파일이 2번 존재할 필요는 없으니까
+                 File.Move(@"C:\temp\src.png",$"C:\\temp\\{now}.png");//저장 파일명을현재 날짜로 변환시켜줌
             }
             catch (Exception ex)
             {
