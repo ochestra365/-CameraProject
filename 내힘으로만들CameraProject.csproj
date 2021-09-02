@@ -102,6 +102,12 @@
     <Compile Include="VIew\watch.Designer.cs">
       <DependentUpon>watch.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIew\WebRTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIew\WebRTC.Designer.cs">
+      <DependentUpon>WebRTC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="VIew\CaculatingDate.resx">
       <DependentUpon>CaculatingDate.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIew\watch.resx">
       <DependentUpon>watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIew\WebRTC.resx">
+      <DependentUpon>WebRTC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".bin\node.cmd" />
     <None Include="Model\package-lock.json" />

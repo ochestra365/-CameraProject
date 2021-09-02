@@ -168,7 +168,8 @@ namespace 내힘으로만들CameraProject
 
         private void BtnWebRtc_Click(object sender, EventArgs e)
         {
-            //나중에 구현할 기능 현재 기술 습득중 내용은 웹 화상 통신
+            Form f6 = new 내힘으로만들CameraProject.VIew.WebRTC();
+            f6.Show();
         }
         #endregion
     }
